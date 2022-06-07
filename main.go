@@ -56,7 +56,7 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/getData/all", func(c *gin.Context) {
+	r.GET("/query/all", func(c *gin.Context) {
 		var users []User
 
 		// 获取全部记录
@@ -68,7 +68,7 @@ func main() {
 		})
 	})
 
-	r.GET("/getData/page", func(c *gin.Context) {
+	r.GET("/query/page", func(c *gin.Context) {
 		current := c.Query("current")
 		size := c.Query("size")
 
